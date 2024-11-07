@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kalkulator BMI</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <main class="container">
+        <!-- Bagian Form -->
+        <section class="form-section">
+            <h1>Kalkulator BMI</h1>
+            <p>Berat badan ideal adalah impian semua orang. Yuk, hitung sekarang di kalkulator BMI.</p>
+            <form id="bmiForm">
+                <!-- Bagian Jenis Kelamin -->
+                <fieldset class="gender-field">
+                    <legend>Jenis Kelamin</legend>
+                    <label>
+                        <input type="radio" name="gender" value="Pria" checked>
+                        <span>Pria</span>
+                    </label>
+                    <label>
+                        <input type="radio" name="gender" value="Wanita">
+                        <span>Wanita</span>
+                    </label>
+                </fieldset>
+                <label for="weight">Berat Badan (kg)</label>
+                <input type="number" id="weight" placeholder="Masukkan berat badan" required>
+                
+                <label for="age">Usia (tahun)</label>
+                <input type="number" id="age" placeholder="Masukkan usia" required>
+                
+                <label for="height">Tinggi Badan (cm)</label>
+                <input type="number" id="height" placeholder="Masukkan tinggi badan" required>
+                
+                <button type="button" onclick="calculateBMI()">Hitung BMI</button>
+                <button type="reset">Reset</button>
+            </form>
+        </section>
+
+        <!-- Bagian Hasil -->
+        <section class="result-section">
+            <h2>Hasil</h2>
+            <div class="result-box" id="resultBox">
+                <h3 id="bmiResult">Berat Badan: -</h3>
+                <p id="bmiCategory">Kategori: -</p>
+                <button type="button" onclick="downloadResult()">Download Hasil BMI</button>
+                <p>Hasil BMI Anda memberikan gambaran mengenai kondisi tubuh Anda.</p>
+            </div>
+            <div class="apps-buttons">
+                <a href="#">Konsultasi Ahli Gizi Via Aplikasi</a>
+                <a href="#">Registrasi Online Ahli Gizi</a>
+            </div>
+        </section>
+    </main>
+
+    <script src="js/script.js"></script>
+</body>
+</html>
